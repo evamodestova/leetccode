@@ -1,11 +1,9 @@
 class Solution(object):
     def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
+        # idea: looping throough the list starting at index 0 and looking at the rest of the integers to find if adding any of them matches the target
+        # using enumerate to keep track of the indecies in case of repetition of numbers in the list
         for index, num1 in enumerate(nums):
+            # creating a sub-list of the numbers that excludde the numbers already looked at before
             sub_nums = nums[index+1:]
             for num2 in sub_nums:
                 if num1 + num2 == target:
@@ -13,4 +11,6 @@ class Solution(object):
                     return list_of_indecies
     list = [3,3]
     print(twoSum(twoSum, list, 6))
+# time complexity: O(N^2)
+# runtime: 1169 ms
     
