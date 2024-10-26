@@ -1,0 +1,16 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        for index, num1 in enumerate(nums):
+            sub_nums = nums[index+1:]
+            for num2 in sub_nums:
+                if num1 + num2 == target:
+                    list_of_indecies = [index, sub_nums.index(num2)+index+1]
+                    return list_of_indecies
+    list = [3,3]
+    print(twoSum(twoSum, list, 6))
+    
